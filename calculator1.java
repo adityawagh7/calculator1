@@ -7,9 +7,9 @@ public class calculator1{
 
 
         System.out.println("enter number 1");
-        Float num1=20.5;
+        double num1=20;
         System.out.println("enter number 2");
-        Float num2=30.5;
+        double num2=30;
         System.out.println("choose one");
         System.out.println("1.addition");
         System.out.println("2.substraction");
