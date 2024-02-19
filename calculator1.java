@@ -1,43 +1,36 @@
 import java.util.Scanner;
 
-public class calculator1{
+public class calculator1 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the first number: ");
+        double num1 = 100;
 
+        System.out.print("Enter the second number: ");
+        double num2 = 200;
+        System.out.println("Sum: " + add(num1, num2));
+        System.out.println("Difference: " + subtract(num1, num2));
+        System.out.println("Product: " + multiply(num1, num2));
+        System.out.println("Quotient: " + divide(num1, num2));
 
-        System.out.println("enter number 1");
-        double num1=20;
-        System.out.println("enter number 2");
-        double num2=30;
-        System.out.println("choose one");
-        System.out.println("1.addition");
-        System.out.println("2.substraction");
-        System.out.println("3.mulit");
-        System.out.println("4.div");
-
-        char c=scanner.next().charAt(0);
-        switch(c) {
-            case '1' : 
-            System.out.println("addition :"+(num1+num2));
-            break;
-            case '2' : 
-            System.out.println("sub :"+(num1-num2));
-            break;
-            case'3' : 
-            System.out.println("multi :"+(num1*num2));
-            break;
-            case '4' : 
-            System.out.println("4.div :"+(num1/num2));
-            break;
-
-            default:
-            System.out.println("invalid");
-
-
-
-        }
-
+        scanner.close();
     }
-
+    public static double add(double num1, double num2) {
+        return num1 + num2;
+    }
+    public static double subtract(double num1, double num2) {
+        return num1 - num2;
+    }
+    public static double multiply(double num1, double num2) {
+        return num1 * num2;
+    }
+    public static double divide(double num1, double num2) {
+        if (num2 != 0) {
+            return num1 / num2;
+        } else {
+            System.out.println("Cannot divide by zero.");
+            return Double.NaN;
+        }
+    }
 }
